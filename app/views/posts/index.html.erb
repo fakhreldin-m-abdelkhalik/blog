@@ -1,0 +1,13 @@
+<h1>My Blog</h1>
+
+<% @posts.each do |post| %>
+  <div class="post">
+    <h3><%= post.title %></h3>
+    <p><%= post.description.truncate(100, separator: ' ') %></p>
+    <%= link_to 'Show', post %>
+  </div>
+<% end %>
+
+<% if user_signed_in? %>
+  <%= link_to 'New post', new_post_path %>
+<% end %>
