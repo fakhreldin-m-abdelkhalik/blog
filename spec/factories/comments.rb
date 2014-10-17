@@ -2,8 +2,8 @@
 
 FactoryGirl.define do
   factory :comment do
-    text "MyText"
-    commenter nil
-    post nil
+    text "My comment"
+    association :commenter, factory: :user
+    association :post, factory: :user
   end
 end

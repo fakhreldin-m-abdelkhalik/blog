@@ -3,3 +3,5 @@
 <p>
   <%= @post.description %>
 </p>
+
+<%= link_to 'Rent', rent_post_path(post), method: :patch, remote: true %>
